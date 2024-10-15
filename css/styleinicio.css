@@ -1,0 +1,90 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --amarillo: #ffc107;
+    --secundario: #0097A7;
+    --gris: #757575;
+}
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Playwrite FR Moderne", cursive;
+    background-image: linear-gradient(to top, #DFE9f3 0%, var(--blanco) 100%);
+    margin: 0;
+    padding: 0;
+    color: var(--oscuro);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--amarillo);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header h1 {
+    font-size: 4rem;
+    margin: 0;
+    color: var(--oscuro);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+main {
+    padding: 2rem 1rem;
+}
+
+.platos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.platos section {
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.platos h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--oscuro);
+    font-weight: 300;
+}
+
+.platos img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .sobre-nosotros {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .sobre-nosotros h2 {
+        font-size: 2rem;
+    }
+
+    .sobre-nosotros h3 {
+        font-size: 1.6rem;
+    }
+}
